@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Text+Me+One');
+
+:root{
+    --bg: linear-gradient(35deg, #607D8B,#37474F);
+    --bg-text: linear-gradient(35deg, #3023AE,#C96DD8);
+    --base-color: #5bff75;
+    --base-color: white;
+    --border-radius: 3px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Text Me One', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: rgb(52, 51, 51); */
+    /* background: var(--bg); */
+}
+
+h2{
+    font-size: 30vmin;
+    color:var(--base-color);
+    font-weight: 100;
+    line-height: 0.9; 
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+    background: var(--bg-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+small{
+    display: block;
+    font-size: 12vmin;
+}
+
+/* SIGNUP */
+#mc_embed_signup{
+  margin-top: 30px;
+}
+
+.mc-field-group{
+  display: flex;
+  background: var(--bg-text);
+  border-radius: 3px;
+}
+
+#mc-embedded-subscribe{
+  background: transparent;
+  font-size: medium;
+  padding: 10px;
+  color: white;
+  border: 0 none;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+#mce-EMAIL{
+  font-size: medium;
+  padding: 10px;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  margin: 2px;
+  border: 1px solid transparent;
+}

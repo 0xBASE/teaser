@@ -1,103 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>0xBase</title>
 
-        <style>
-            @import url('https://fonts.googleapis.com/css?family=Text+Me+One');
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>0xBase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-            :root{
-                --bg: linear-gradient(35deg, #607D8B,#37474F);
-                --bg-text: linear-gradient(35deg, #607D8B,#37474F);
-                --base-color: #5bff75;
-                --base-color: white;
-            }
+<body>
+    <h2>0x<small>BASE</small></h2>
+    <!-- <p>Mobile-first decentralized applications infrastructure the devices of today and the internet of the future</p> -->
 
-            body{
-                margin: 0;
-                padding: 0;
-                height: 100vmin;
-                font-family: 'Text Me One', sans-serif;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                /* background: rgb(52, 51, 51); */
-                /* background: var(--bg); */
-            }
+    <!-- Begin MailChimp Signup Form -->
+    <div id="mc_embed_signup">
+        <form 
+            action="https://0xbase.us17.list-manage.com/subscribe/post?u=0a96690fa626677a72de0139e&amp;id=e91a754e09" 
+            method="post"
+            id="mc-embedded-subscribe-form" 
+            name="mc-embedded-subscribe-form" 
+            class="validate" 
+            target="_blank" 
+            novalidate>
+            <div class="mc-field-group">
+                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </div>
 
-            h2{
-                font-size: 30vmin;
-                color:var(--base-color);
-                font-weight: 100;
-                line-height: 1; 
-                text-align: center;
-                margin: 0;
-                padding: 0;
+            <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
 
-                background: var(--bg-text);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_0a96690fa626677a72de0139e_e91a754e09" tabindex="-1" value="">
+            </div>
+        </form>
+    </div>
+    <!--End mc_embed_signup-->
 
-            small{
-                display: block;
-                font-size: 12vh;
-            }
-        </style>
+    <script src="script.js"></script>
+</body>
 
-        <script>
-            var colors = new Array(
-                [62,35,255],
-                [60,255,60],
-                [255,35,98],
-                [45,175,230],
-                [255,0,255],
-                [255,128,0]
-            );
-            var step = 0;
-            var colorIndices = [0,1,2,3];
-            var gradientSpeed = 0.002;
-
-            function updateGradient() {
-                var c0_0 = colors[colorIndices[0]];
-                var c0_1 = colors[colorIndices[1]];
-                var c1_0 = colors[colorIndices[2]];
-                var c1_1 = colors[colorIndices[3]];
-
-                var istep = 1 - step;
-                var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
-                var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
-                var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
-                var color1 = "rgb("+r1+","+g1+","+b1+")";
-
-                var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
-                var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
-                var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
-                var color2 = "rgb("+r2+","+g2+","+b2+")";
-
-
-                document.documentElement.style.setProperty(`--bg-text`, "linear-gradient(35deg, " + color1 + "," + color2 + ")");
-                
-                step += gradientSpeed;
-                if ( step >= 1 ){
-                    step %= 1;
-                    colorIndices[0] = colorIndices[1];
-                    colorIndices[2] = colorIndices[3];
-                    colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-                    colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-                }
-            }
-
-            setInterval(updateGradient,100);
-
-
-        </script>
-    </head>
-    <body>
-        <h2>0x<small>BASE</small></h2>
-    </body>
 </html>
