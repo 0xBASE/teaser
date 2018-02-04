@@ -8,21 +8,21 @@
     --border-radius: 3px;
 }
 
+html, body{
+  height: 100%;
+}
+
 body{
     margin: 0;
     padding: 0 15px;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background: rgb(52, 51, 51); */
-    /* background: var(--bg); */
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
-h2{
-    font-size: 30vmin;
+.base-title{
     color:var(--base-color);
     font-weight: 100;
     line-height: 0.9; 
@@ -31,17 +31,37 @@ h2{
     padding: 0;
     font-family: 'Text Me One', sans-serif;
 
+    background: linear-gradient(35deg, #3023AE,#C96DD8);
+    background: -webkit-linear-gradient(35deg, #3023AE,#C96DD8);
+    background: -moz-linear-gradient(35deg, #3023AE,#C96DD8);
+    background: -o-linear-gradient(35deg, #3023AE,#C96DD8);
     background: var(--bg-text);
-    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    background-clip: text;
+    
 }
 
-small{
-    display: block;
-    font-size: 12vmin;
+.base-title span{
+  font-size: 30vmin;
 }
+
+.base-title small{
+  font-size: 12vmin;
+}
+
+@supports not (-webkit-background-clip: text) {
+  .base-title {
+    color:transparent;
+    background: url(0xBASE.png) center center/cover no-repeat;
+  }
+}
+
+
 
 p{
   width: 400px;
@@ -49,6 +69,23 @@ p{
   font-size: normal;
   margin: 15px 0;
   color: #a0a0a0;
+}
+
+.logo-wrapper{
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.logo{
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(35deg, #3023AE,#C96DD8);
+  background: var(--bg-text);
+  -webkit-clip-path: url(#svgLogo);
+  clip-path: url(#svgLogo);
+  clip-rule: nonzero;
 }
 
 /* SIGNUP */
@@ -59,6 +96,7 @@ p{
 
 .mc-field-group{
   display: flex;
+  background: linear-gradient(35deg, #3023AE,#C96DD8);
   background: var(--bg-text);
   border-radius: 3px;
 }
